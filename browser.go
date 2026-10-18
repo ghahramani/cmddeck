@@ -3,7 +3,6 @@ package main
 import (
 	"fmt"
 	"os"
-	"os/exec"
 	"os/signal"
 	"strings"
 	"syscall"
@@ -359,20 +358,7 @@ func (b *browser) launch(command Command, action string) error {
 			display += " " + strings.Join(args, " ")
 		}
 		fmt.Fprintf(os.Stdout, "\n\x1b[1;36m▶ %s\x1b[0m\n\n", cleanText(display))
-		child := exec.Command(command.Path, args...)
-		child.Stdin, child.Stdout, child.Stderr = os.Stdin, os.Stdout, os.Stderr
-		runError := child.Run()
-		draining := true
-		for draining {
-			select {
-			case sig := <-b.signals:
-				if sig != syscall.SIGINT && sig != syscall.SIGWINCH {
-					b.quitting = true
-				}
-			default:
-				draining = false
-			}
-		}
+		runError := b.runCommand(command.Path, args)
 		if b.quitting {
 			return nil
 		}

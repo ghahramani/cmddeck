@@ -62,7 +62,7 @@ cmddeck --all --json          # include basic system commands
 | / from categories | Search all commands |
 | Esc | Clear the search or go back |
 | Ctrl+U | Clear the current search or argument input |
-| Ctrl+C | Quit the browser |
+| Ctrl+C | Stop the running command and quit cmddeck quietly |
 
 Arguments support quoting, cursor movement, and inline validation. They are
 remembered per command for the current session. After a command finishes, its
