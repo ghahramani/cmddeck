@@ -401,9 +401,9 @@
     "files": "eza exa fd fdfind fzf fzf-tmux ncdu dust duf broot ranger lf yazi nnn vifm mc rsync rclone trash trash-put trash-empty trash-restore trash-list trash-rm tree file plocate updatedb kfind dolphin thunar nautilus nemo",
     "search": "rg ripgrep rga rga-fzf ugrep ug ug+ jq yq bat delta difft sd ag ack choose xsv miller mlr gron fx hexyl xxd strings recode iconv uchardet chardetect",
     "terminal": "fish zsh nu nushell tmux screen zellij byobu starship oh-my-posh atuin zoxide direnv mcfly fzf-tmux kitty alacritty wezterm foot konsole yakuake xterm uxterm warp-terminal ttyd vhs gum dialog whiptail zenity yad expect autoexpect unbuffer tldr tealdeer rtk fuck thefuck cmdfu cmds cmddeck",
-    "editors": "vim nvim neovim nano micro emacs code code-insiders codium cursor agy idea studio subl kate kwrite meld marktext edit",
+    "editors": "vim nvim neovim nano micro emacs code code-insiders codium cursor idea studio subl kate kwrite meld marktext edit",
     "git": "git gitk gh glab lazygit tig gitui jj jujutsu git-lfs hub scalar",
-    "ai": "claude codex cursor-agent agent opencode kimi mimo grok freebuff kiro-cli kiro-cli-chat kiro-cli-term qodercli qwen gemini aider goose amp ollama llama-cli llama-server llm fabric-ai graphify graphify-mcp mods aichat sgpt whisper whisper_helper.py",
+    "ai": "claude codex cursor-agent agent opencode kimi mimo grok freebuff kiro-cli kiro-cli-chat kiro-cli-term qodercli qwen gemini aider goose amp ollama llama-cli llama-server llm fabric-ai graphify graphify-mcp mods aichat sgpt whisper whisper_helper.py agy",
     "containers": "docker docker-compose dockerd podman podman-compose podman-desktop podman-remote buildah skopeo distrobox boxbuddy-rs kontainer runc crun ctr containerd nerdctl bwrap catatonit conmon lxc lxcfs",
     "virtualization": "virsh virt-manager virt-install virt-viewer remote-viewer virt-clone vm-curator qemu-img qemu-io qemu-nbd VBoxManage VirtualBox looking-glass-client",
     "cloud": "kubectl kubectx kubens k9s helm minikube kind k3d kubetail skaffold stern aws az gcloud terraform tofu pulumi ansible ansible-playbook vagrant packer doctl flyctl railway vercel netlify wrangler",
@@ -635,7 +635,7 @@
     "code-insiders": "editors",
     "codium": "editors",
     "cursor": "editors",
-    "agy": "editors",
+    "agy": "ai",
     "idea": "editors",
     "studio": "editors",
     "subl": "editors",
@@ -1401,7 +1401,8 @@
     "sync-router-cert.sh": "Local router certificate synchronization script",
     "vm-curator": "Organize and manage virtual machines",
     "cmds": "Browse installed commands by purpose",
-    "cmddeck": "Browse and run installed commands"
+    "cmddeck": "Browse and run installed commands",
+    "agy": "Antigravity AI coding environment"
   },
   "command_patterns": [
     {
