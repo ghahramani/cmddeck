@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - uses: actions/setup-go@v7
+        with:
+          go-version: stable
+          cache: false
+      - name: Check formatting
+        run: test -z "$(gofmt -l .)"
+      - name: Test and vet
+        run: |
+          go test -buildvcs=false ./...
+          go vet -buildvcs=false ./...
+      - name: Build standalone Linux binary
+        env:
+          CGO_ENABLED: "0"
+        run: go build -buildvcs=false -trimpath -o bin/cmddeck .

@@ -1,0 +1,9 @@
+{
+  "exclude": [],
+  "commands": {
+    "my-custom-script": {
+      "category": "system",
+      "description": "My custom hardware helper"
+    }
+  }
+}
